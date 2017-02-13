@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="ru.alexking.models.user.Feedback" table="feedbacks">
+        <meta attribute="class-description">
+            This class contains the feedback of user.
+        </meta>
+        <id name="id" type="int" column="uid">
+            <generator class="identity"/>
+        </id>
+        <many-to-one name="sender" column="sender_id" class="ru.alexking.models.user.User" cascade="save-update" lazy="false"/>
+        <property name="text" column="text" type="string"/>
+        <property name="timeAdd" column="time_add" type="java.sql.Timestamp"/>
+    </class>
+</hibernate-mapping>

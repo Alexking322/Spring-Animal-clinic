@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="ru.alexking.models.user.Contact" table="contacts">
+        <meta attribute="class-description">
+            This class contains the contact of user.
+        </meta>
+        <id name="id" type="int" column="uid">
+            <generator class="identity"/>
+        </id>
+        <many-to-one name="user" column="user_id" class="ru.alexking.models.user.User" cascade="save-update" lazy="false"/>
+        <many-to-one name="contact" column="contact_id" class="ru.alexking.models.user.User" cascade="save-update" lazy="false"/>
+        <property name="dateAdd" column="date_add" type="java.sql.Timestamp"/>
+    </class>
+
+    <query name="getContactsOfUser"><![CDATA[from Contact as contact where contact.user.id = :id]]></query>
+    <query name="isContact"><![CDATA[from Contact as contact where contact.user.id = :userId and contact.contact.id = :contactId]]></query>
+</hibernate-mapping>

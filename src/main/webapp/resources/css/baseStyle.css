@@ -1,0 +1,42 @@
+body {
+    font: 16px/1.5  Arial, Verdana, Tahoma, sans-serif;
+    background-image: url(/resources/images/bkg.jpg);
+    color: #2d6938;
+}
+
+.main{
+    margin-left: auto;
+    margin-right: auto;
+    width: 850px;
+    margin: 0 auto;
+    background-color: khaki;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.header{
+    overflow: hidden;
+    margin: 20px 24px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.menu{
+    overflow: hidden;
+    margin: 20px 24px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.content{
+    overflow: hidden;
+    margin: 20px 24px;
+    padding: 30px 25px 40px 25px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.error{
+    color: red;
+}

@@ -1,0 +1,158 @@
+.profile_head {
+	margin-top: 30px;
+}
+.profile_head a {
+	color: #333;
+	font-size: 17px;
+	font-family: "RobotoBold"
+}
+.profile_head a:hover {
+	color: red;
+	text-decoration: underline;
+}
+.username:hover {
+	color: #0094C6 !important;
+}
+.head {
+	margin-top: 40px;
+}
+.avatar {
+	display: inline-block;
+	border-radius: 3px;
+}
+.head b {
+	color: #333;
+	font-size: 1.275em;
+	display: inline-block;
+	margin-left: 15px;
+    position: relative;
+    bottom: 15px
+}
+.main_content {
+	margin-bottom: 120px;
+}
+.user_info_template {
+	margin-top: 30px;
+	display: inline-block;
+}
+.user_info_template em {
+	color: #858585;
+    display: inline-block;
+    font-size: 15px;
+    margin-top: 13px;
+}
+.head_links {
+	margin-top: 20px;
+}
+.public_data {
+	display: inline-block;
+}
+.public_data ul li,
+.private_data ul li {
+	display: inline-block;
+}
+.public_data li:first-child {
+	margin-left: 0px;
+}
+.public_data li {
+	margin-left: 20px;
+}
+.head_links	a {
+	font-family: "RobotoRegular";
+    text-decoration: underline;
+    font-size: 15px;
+}
+.head_links sub {
+	font-size: 10px;
+    top: -4px;
+    position: relative;
+    margin-left: 2px;
+}
+.user_info {
+	display: inline-block;
+	margin-left: 65px;
+}
+.user_info span {
+	display: inline-block;
+	margin-top: 13px;
+}
+.status_info {
+	position: absolute;
+    top: 40px;
+    left: 85%;
+    margin-left: -20px;
+    font-size: 11px;
+    color: #999;
+}
+.private_data {
+	display: inline-block;
+}
+.private_data a {
+	color: red;
+}
+.private_data a:hover {
+	text-decoration: none !important;
+}
+.private_data li {
+	margin-left: 27px;
+}
+.private_data li:first-child {
+	margin-left: 80px;
+}
+.add_contact {
+	padding: 5px 10px;
+	border-radius: 25px;
+	border: #21ADBF 1px solid;
+	color: #21ADBF !important;
+	font-size: 13px !important;
+	margin-left: 10px;
+	background-color: #fff;
+	text-decoration: underline;
+	outline: none;
+}
+.add_contact:hover {
+	color: red !important;
+}
+.messages,
+.contacts {
+	padding: 5px 10px;
+	border-radius: 25px;
+	border: #00ae00 1px solid;
+	color: #00ae00 !important;
+	font-size: 13px !important;
+	margin-left: 10px;
+	background-color: #fff;
+	text-decoration: underline;
+	outline: none;
+}
+.contacts {
+	border: #21ADBF 1px solid;
+	color: #21ADBF !important;
+}
+.contacts:active {
+	background: #21ADBF;
+    color: #fff !important;
+    text-decoration: none !important;
+}
+.messages:active {
+	background: #00ae00;
+	color: #fff !important;
+    text-decoration: none !important;
+}
+.messages:hover,
+.contacts:hover {
+	text-decoration: none !important;
+}
+.edit,
+.exit {
+	font-size: 12px !important;
+}
+.private_item1 {
+	display: inline-block;
+}
+.private_item2 {
+	display: inline-block;
+	position: absolute;
+    right: 0;
+    top: 90px;
+}

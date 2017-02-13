@@ -1,0 +1,12 @@
+.active {
+	padding: 5px 9px 7px 9px;
+	background: linear-gradient(to top, #2BB3FC, #9DD9FA);
+	border-radius: 5px;
+	color: #fff !important;
+}
+.active:hover {
+	background: linear-gradient(to top, #55C1FC, #9CD9FA);
+}
+.active:active {
+	background: #2BB3FC;
+}

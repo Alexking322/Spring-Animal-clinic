@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="ru.alexking.models.user.Message" table="messages">
+        <meta attribute="class-description">
+            This class contains the message of user.
+        </meta>
+        <id name="id" type="int" column="uid">
+            <generator class="identity"/>
+        </id>
+        <many-to-one name="recipient" column="recipient_id" class="ru.alexking.models.user.User" cascade="save-update" lazy="false"/>
+        <many-to-one name="sender" column="sender_id" class="ru.alexking.models.user.User" cascade="save-update" lazy="false"/>
+        <property name="text" column="text" type="string"/>
+        <property name="timeSend" column="time_send" type="java.sql.Timestamp"/>
+    </class>
+
+    <query name="getDialogMessages"><![CDATA[from Message as message where message.recipient.id = :id]]></query>
+    <query name="getIncomingMessages"><![CDATA[from Message as message where message.recipient.id = :id]]></query>
+    <query name="getOutgoingMessages"><![CDATA[from Message as message where message.sender.id = :id]]></query>
+    <query name="getMessageByText"><![CDATA[from Message as message where message.text = :messageText]]></query>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="ru.alexking.models.user.Role" table="roles">
+        <meta attribute="class-description">
+            This class contains the role detail.
+        </meta>
+        <id name="id" type="int" column="uid">
+            <generator class="identity"/>
+        </id>
+        <property name="name" column="name">
+            <type name="org.hibernate.type.EnumType">
+                <param name="enumClass">ru.alexking.enums.RoleType</param>
+                <param name="useNamed">true</param>
+            </type>
+        </property>
+    </class>
+</hibernate-mapping>
